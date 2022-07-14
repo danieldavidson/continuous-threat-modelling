@@ -1,6 +1,6 @@
-# Secure Developer Checklist - Continuous Threat Modeling
+# Secure Developer Checklist for Continuous Threat Modeling
 
-## How can this list help you
+## How This Checklist Helps You
 
 * Use the right mindset: the Secure Development Checklist is *NOT* an exhaustive how-to. The checklist is a compilation of the fundamentals of secure development, for quick, convenient consumption. Using the Secure Development Checklist should lead you to ask further security-relevant questions and find appropriate guidance for your particular environment.
 * Reach out to your security team if you need guidance or support with secure development. Questions are a great way to get to know your security folks and start building a partnership.
