@@ -1,7 +1,5 @@
 # Continuous Threat Modelling
 
-{{TOC}}
-
 ## Introduction
 
 Threat modeling is a structured approach of identifying and prioritizing potential threats to a system, and determining the value that potential mitigations would have in reducing or neutralizing those threats. This guide provides an approach to creating a threat model for both existing systems or applications as well as new systems, and then explains how to keep the model current with continuous threat modelling (CTM).
