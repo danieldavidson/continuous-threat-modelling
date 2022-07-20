@@ -1,0 +1,17 @@
+[Cc]leartext
+[Pp]laintext
+[Rr]epo
+[Hh]ardcod
+[Mm]itigat
+[Bb]ackchannel
+[Tt]oolkit
+Autodesk
+[Uu]ntrusted
+session_id
+asynchronicity
+deserialization
+Dataflow
+Cloudtrail
+unencrypted
+Lua
+[Ss]andboxing

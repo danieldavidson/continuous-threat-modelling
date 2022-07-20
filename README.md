@@ -1,6 +1,8 @@
 # Continuous Threat Modelling
 
-Continuous Threat Modelling (CTM) is a threat modelling approach that enables development teams to perform threat modelling autonomously with minimal initial security knowledge. The approach is evolutionary, dynamic and should mesh well with teams using Agile and evolving system architectures.
+Continuous threat modelling (CTM) is a threat modelling approach that enables development teams to perform threat modelling autonomously with minimal initial security knowledge. The approach is evolutionary, dynamic and should mesh well with teams using Agile and evolving system architectures.
+
+The [Continuous_Threat_Modelling_Reference.md](Continuous_Threat_Modelling_Reference.md) helps create the initial threat model. While the [Secure_Developer_Checklist.md](Secure_Developer_Checklist.md) helps keep the model up-to-date and relevant.
 
 ## Contributing
 
@@ -11,10 +13,6 @@ All manner of contributions are welcome. The approach is in early development an
 * Keep style consistent.
 * Keep things simple.
 * Focus on principles.
-
-## Background
-
-To learn how Autodesk uses their [CTM Handbook and Checklist](https://github.com/Autodesk/continuous-threat-modeling) for continuous threat modelling, watch ["Threat Modeling Every Story: Practical Continuous Threat Modeling For Your Team"](https://www.youtube.com/watch?v=VbW-X0j35gw).
 
 ---
 
