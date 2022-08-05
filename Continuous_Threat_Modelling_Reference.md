@@ -2,11 +2,11 @@
 
 ## Introduction
 
-Threat modeling is a structured approach of identifying and prioritizing potential threats to a system, and determining the value that potential mitigations would have in reducing or neutralizing those threats. This guide provides an approach to creating a threat model for both existing systems or applications as well as new systems, and then explains how to keep the model current with continuous threat modelling (CTM).
+Threat modeling is a structured approach of identifying and prioritizing potential threats to a system, and determining the value that potential mitigations would have in reducing or neutralizing those threats. This guide provides an approach to creating a threat model for both existing systems or applications as well as new systems, and then explains how to keep the model current with continuous threat modelling (CTM).[^1]
 
 ### Who performs threat modelling
 
-Practically everyone in your development team has a stake in a threat model. You don't need to be a security expert to apply the techniques covered in this guide. All developers, software and system designers, and architects should strive to include threat modeling in their software development life cycle. Optimally, you will create your threat models and decide which mitigations you need during an early stage of the development of a new system, application, or feature. Assessing potential threats during the design phase of your project can avoid the cost of resources that may be required to refactor the project to include risk mitigations during a later phase of the project.
+Practically everyone in your development team has a stake in a threat model. You don't need to be a security expert to apply the techniques covered in this guide. All developers, software and system designers, and architects should strive to include threat modeling in their software development life cycle. Optimally, you will create your threat models and decide which mitigations you need during an early stage of the development of a new system, application, or feature. Assessing potential threats during the design phase of your project can avoid the cost of resources that may be required to refactor the project to include risk mitigations during a later phase of the project.[^1]
 
 Perform threat modelling as a team. Threat modelling creates an opportunity for informative discussion within the team and isn't limited to team members with specific responsibilities. Delegate the responsibility of updating the threat model to an architect or senior developer, the *curator*. The curator is responsible for keeping the threat model current as it evolves. The curator also owns a queue in the development team’s bug tracking system where tickets are marked with a label such as, *potential-tm-update* and treated as input events for consideration in the threat model. The curator is responsible for adding the required information to tickets in the bug tracking system and updating or closing them, as appropriate.
 
@@ -145,11 +145,10 @@ A threat model is considered complete if the following criteria are met:
 
 * All of the relevant diagrams are in the document.
 * The findings are documented in the format described in the section, [Documenting findings](#documenting-findings).
-* A review request is created, if necessary[^1].
+* A review request is created, if necessary[^2].
 * Post-review, all bugs are documented in the development team’s bug tracking system.
 * The threat model is stored in a central, access-controlled location.
 
-[^1]:A threat model review from the security team should be requested for a new release, or should be made **at least once a year**.
 
 ### How is your threat model reviewed
 
@@ -187,5 +186,8 @@ To create awareness of notable security events and complement security training,
 You can learn more about threat modelling methodologies in the short document [Tactical Threat Modeling - SAFECode](https://www.safecode.org/wp-content/uploads/2017/05/SAFECode_TM_Whitepaper.pdf). For teams looking for more detailed guidance on these (and more) items, review [Avoiding The Top 10 Software Security Design Flaws](https://ieeecs-media.computer.org/media/technical-activities/CYBSI/docs/Top-10-Flaws.pdf) by the IEEE Center for Secure Design.
 
 For more formal instruction, SAFECode has an online training module called [Threat Modeling 101](https://safecode.org/courses/threat-modeling-101/) that takes a deeper look on questions of diagramming, annotation, and risk rating.
+
+[^1]:"[Threat Modeling Cheat Sheet](https://github.com/OWASP/CheatSheetSeries/blob/master/cheatsheets/Threat_Modeling_Cheat_Sheet.md)" by [OWASP](https://github.com/OWASP), used under [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/) / Slightly edited to fit with this document.
+[^2]:A threat model review from the security team should be requested for a new release, or should be made **at least once a year**.
 
 <!-- markdownlint-disable-file MD013 MD033 -->
