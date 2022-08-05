@@ -18,7 +18,7 @@ The full threat modelling service that a security department typically provides
 
 The modern emphasis on agile development doesn't allow development to stop while a team of experts gather into a room to perform some kind of official threat modelling ceremony.
 
-The threat model is a living document and needs to be treated as such, evolving together with the system being developed. Ideally it starts at design time, and evolves together with the system, but most commonly it starts with an effort to model what already exists and then follows the life of the product.
+The threat model is a living document that needs to evolve together with the system being developed. Ideally it starts at design time, and evolves together with the system, but most commonly it starts with an effort to model what already exists and then follows the life of the product.
 
 The threat model should be refreshed once a year or when there are major architectural changes. Ideally, threat modelling should become part of the definition of done for every story with a security-notable event (this is covered in more detail in the section, [The threat model is a living document](#the-threat-model-is-alivingdocument).
 
@@ -26,7 +26,7 @@ The threat model should be refreshed once a year or when there are major archi
 
 ### What are you building
 
-The following objectives will produce a representative data flow diagram (DFD) of the system:
+The following objectives will produce a representative [data flow diagram (DFD)](https://en.wikipedia.org/wiki/Data-flow_diagram) of the system. The diagram should tell the story of how the system works. It will be the single source of truth for all following steps of the exercise.
 
 *Define the scope*
 : Are you threat modelling a full system or just a small design change. Decide which elements of the system will be part of the threat model.
@@ -49,19 +49,19 @@ The following objectives will produce a representative data flow diagram (DFD) o
 *Mark where the important data lives, transits and is transformed*
 : This is important, as here you’ll find out which data you are trying to protect and where it appears in the system. Continue to the section [Diagram details](#diagram-details) below to ensure that the final DFD(s) include the required information.
 
-Notice that the format of the DFD is important. If all teams follow the same format, it's easier for everyone to locate the same information in distinct threat models, and for members of your security team to absorb this information when working with multiple development teams.
+The format of the DFD is important. If all teams follow the same format, it's easier for everyone to locate the same information in distinct threat models, and for members of your security team to absorb this information when working with various development teams.
 
 #### Diagram details
 
-It may help to use the questions below to highlight extra information that should be added to the diagram. Details such as protocols and the type of data in each request and response between the components, especially those owned by the team or anything else custom or new. If adding all of this info to the high-level DFD ("L0") gets too dense for readability, please break up the diagram into separate, more detailed DFDs ("L1").
+It may help to use the questions below to highlight extra information that should be added to the diagram. Details such as protocols and the purpose of each request and response between the components, especially those owned by the team or anything else custom or new. If adding all this info to the high-level DFD ("L0") gets too dense for readability, please break up the diagram into separate, more detailed DFDs ("L1").
 
 * How do each of the components communicate? (what protocol is in use for each data flow?)
-* What's exchanged in each data flow (what information does it have? what's the purpose of the request/response? What type of data is it? Example: credentials, authentication, HTML).
+* What's exchanged in each data flow (what information does it have? what's the purpose of the request/response? What data is it? Example: credentials, authentication, HTML).
 * Who stores what and where? (for example, what's stored in the DB?)
 * Show how data flows through the application (How and where are decisions made?)
 * What are the authentication and authorization checks in place for each data flow? In what order do they occur?
 
-DFDs should contain the following details. Even if these are captured elsewhere in the threat model document, there still needs to be a complete visualization in one or more L0 and L1 DFDs:
+DFDs should contain the following details, even those details captured elsewhere in the threat model document:
 
 * Provide a complete diagram of your system, including deployment.
 * Label each component in the system overview DFD (L0).
@@ -78,11 +78,11 @@ DFDs should contain the following details. Even if these are captured elsewhere 
 
 ### What can go wrong
 
-When the diagram has enough information, the team iterates over it searching for places where it fails to protect confidentiality, integrity, or availability.
+When the diagram has enough information, the team iterates over it searching for places where it fails to protect confidentiality, integrity, or availability. It may be easiest or most logical to start with external entities, such as the user interacting with your web app, or start with the actor that initiates the activity represented in the DFD. Any orderly strategy will make the task of threat modelling the system feel less daunting, and will provide a sense of progress and conclusion through the exercise.
 
-Start with answering the items below to focus the effort. This isn't an exhaustive list and attention must be taken to integrating these with existing mechanisms, such as widely-used company authentication APIs, cloud provider resources and processes, etc.
+Start with answering the items below to focus and inspire the effort. This isn't an exhaustive list and the questions may or may not be relevant to your system or company. Consider these questions in the context of existing mechanisms, such as widely used company authentication APIs, cloud provider resources and processes, etc.
 
-For each finding, identify: a scenario where the finding is exploited (an *attack scenario*); the impact to the system and company as a whole; and estimate how likely this scenario is.
+For each finding, identify: a scenario where an actor exploits the finding (an *attack scenario*); the impact to the system and company as a whole; and the likelihood of the attack scenario.
 
 |Subject|Sample questions under that subject|
 |--------|----------------------------------------|
