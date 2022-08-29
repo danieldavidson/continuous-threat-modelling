@@ -16,8 +16,6 @@ The full threat modelling service that a security department typically provides
 
 ### When to threat model
 
-The modern emphasis on agile development doesn't allow development to stop while a team of experts gather into a room to perform some kind of official threat modelling ceremony.
-
 The threat model is a living document that needs to evolve together with the system being developed. Ideally it starts at design time, and evolves together with the system, but most commonly it starts with an effort to model what already exists and then follows the life of the product.
 
 The threat model should be refreshed once a year or when there are major architectural changes. Ideally, threat modelling should become part of the definition of done for every story with a security-notable event (this is covered in more detail in the section, [The threat model is a living document](#the-threat-model-is-alivingdocument).
