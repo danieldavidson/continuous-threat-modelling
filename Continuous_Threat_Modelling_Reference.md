@@ -53,10 +53,10 @@ The format of the DFD is important. If all teams follow the same format, it's e
 
 It may help to use the questions below to highlight extra information that should be added to the diagram. Details such as protocols and the purpose of each request and response between the components, especially those owned by the team or anything else custom or new. If adding all this info to the high-level DFD ("L0") gets too dense for readability, please break up the diagram into separate, more detailed DFDs ("L1").
 
-* How do each of the components communicate? (what protocol is in use for each data flow?)
-* What's exchanged in each data flow (what information does it have? what's the purpose of the request/response? What data is it? Example: credentials, authentication, HTML).
-* Who stores what and where? (for example, what's stored in the DB?)
-* Show how data flows through the application (How and where are decisions made?)
+* How do each of the components communicate? What protocol is in use for each data flow?
+* What's exchanged in each data flow? What information does it have? What's the purpose of the request/response? What data is it? (for example, credentials, authentication, HTML)
+* Who stores what and where? (for example, what's stored in the DB)
+* Show how data flows through the application. How and where are decisions made?
 * What are the authentication and authorization checks in place for each data flow? In what order do they occur?
 
 DFDs should contain the following details, even those details captured elsewhere in the threat model document:
