@@ -17,3 +17,7 @@ Lua
 [Ss]andboxing
 DFD
 API
+OAuth
+HTTPOnly
+IPs
+SAFECode
