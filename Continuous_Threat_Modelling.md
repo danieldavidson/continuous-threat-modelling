@@ -105,44 +105,36 @@ For each finding, identify: a scenario where an actor exploits the finding (an *
 
 ### What are you going to do about it
 
-Once some findings have been identified and the development team can't come up with any more, they need to be ranked by priority.
+Once the development team has identified some threats and can't come up with any more, rank them by priority.
 
-Information security often uses [CVSS - Common Vulnerability Scoring System V3](https://nvd.nist.gov/vuln-metrics/cvss/v3-calculator) format, which derives a single number from 0 to 10 based on the characteristics of the flaw, but there are many options. CVSS is pervasive across tools like scanners and is also used for publicly-disclosed vulnerabilities, but it can be difficult to adapt the metrics to the circumstances. In that case, attaching a value to the likelihood (Unlikely=1 → Highly Likely=4) and to the impact (Low Impact=1 → Critical=4) allows a simple calculation of Risk = Likelihood X Impact. With that said, it's important to be consistent so that measures of risk are comparable within a threat model but also between models.
+The security industry often uses the [CVSS - Common Vulnerability Scoring System V3](https://nvd.nist.gov/vuln-metrics/cvss/v3-calculator) formula, which derives a single number from 0 to 10 based on the characteristics of the flaw, but there are many options. CVSS is an industry standard, but it can be difficult to adapt the metrics to the circumstances. In that case, attaching a value to the likelihood (Unlikely=1 → Highly Likely=4) and to the impact (Low Impact=1 → Critical=4) allows a simple calculation of Risk = Likelihood X Impact. With that said, it's important to be consistent so that measures of risk are comparable within a threat model but also between models.
 
-To facilitate tracking and remediation of threat model findings, include the following information in your documentation:
+To help tracking and remediating threat model findings, include the following information in your documentation:
 
-* ID associated with the finding in your bug tracking system. Tickets must be created for all the findings.
-* Attack Scenario (how an attacker would exploit this flaw)
-* Severity (what would be the impact to the system and to the company as a whole? How likely is this to happen?) An explanation of how you arrived at the CVSSv3 score or the risk must also be present.
+* ID associated with the finding in your bug tracking system. Create a ticket for every finding.
+* Attack Scenario: Describe how an attacker would exploit this weakness.
+* Impact: Describe the impact to the system and to the company as a whole.
+* Likelihood: Describe how likely it's that a threat actor will exploit this weakness.
 * Use CVSSv3 or Risk Rating to score the issue.
 * Express the result as a priority level for tickets in your bug tracking system: Trivial/Minor/Major/Critical.
-* Mitigation (how-to, or not-mitigated with justification).
+* Mitigation: How-to, or Not-mitigated with justification.
 
-Unmitigated findings should be added to the threat model document, including their attack scenarios and CVSSv3/Risk score. Please notice that a threat model containing unmitigated flaws becomes a sensitive document, and its distribution should be restricted accordingly.
+List unmitigated findings in the threat model document, including their attack scenarios and CVSSv3/Risk score. Please notice that a threat model containing unmitigated flaws becomes a sensitive document, and its distribution should be restricted accordingly.
 
 #### Closing findings
 
-Identifying valid findings is the objective of threat modelling, but the process is only complete if these findings are mitigated. Identify the changes to the design that are needed to mitigate the findings, and document them in your bug tracking system. Once these changes have been implemented, update design documents and confirm that the system stands more secure after it. Keep your threat model updated to reflect what the system *is*, not what it was or could be.
+Identifying valid findings is the goal of threat modelling, but the process is only complete if these findings are mitigated. Identify the changes to the design that are needed to mitigate the findings, and document them in your bug tracking system. Once these changes have been implemented, update design documents and confirm that the system stands more secure after it. Keep your threat model updated to reflect what the system *is*, not what it was or could be.
 
 ## The threat modelling output
 
-The output, a threat model, is a document (MS Word, HTML, etc.) that should be appropriately stored so that only stakeholders have access. The final threat model document must have a brief description of your product, data flow aiagram(s) and the threats identified. A complete threat model will include the following:
+The output, a threat model, is a document (MS Word, HTML, etc.) that should be appropriately stored so that only stakeholders have access. The final threat model document must have a brief description of your product, data flow diagram(s) and the threats identified. A complete threat model will include the following:
 
-1. General and detailed Data Flow Diagrams (L0 and L1 DFDs)
-1. Network traffic requirements (ports in use, requirements from firewalls, etc.)
-1. Questions in the [What can go wrong](#what-can-go-wrong) section have been answered.
-1. Findings that the development team identified with ticket links (format specified below in the section, [What are you going to do about it](#what-are-you-going-to-do-about-it)).
-1. In the threat model document, list:
-    * Location and nature of sensitive data, assets, and functionality that to protect.
-    * Uses of cryptography.
-    * The threat model curator and other stakeholders involved.
+1. The threat model curator and other stakeholders involved.
+1. General and detailed data flow diagrams (L0 and L1 DFDs).
+1. A list of dataflows and the location and nature of sensitive data, assets, and functionality.
+1. Findings that the development team identified with ticket links (format specified in the section, [What are you going to do about it](#what-are-you-going-to-do-about-it)).
 
-### Threat models and definition of done
-
-A threat model is considered complete if the following criteria are met:
-
-* All the relevant diagrams are in the document.
-* The findings are documented in the format described in the section, [Documenting findings](#documenting-findings).
+Finally,
 * A review request is created, if necessary[^2].
 * Post-review, all bugs are documented in the development team’s bug tracking system.
 * The threat model is stored in a central, access-controlled location.
